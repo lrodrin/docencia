@@ -1,6 +1,4 @@
 *.db
 *.pyc
 .DS_Store
-
-# Pycharm Extension
 .idea/
