@@ -1,7 +1,8 @@
 import graphene
-from database import db_session, User as UserModel
 from graphene import relay
 from graphene_sqlalchemy import SQLAlchemyConnectionField, SQLAlchemyObjectType
+
+from database import db_session, User as UserModel
 
 
 class Users(SQLAlchemyObjectType):
