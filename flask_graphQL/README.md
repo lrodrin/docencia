@@ -2,20 +2,20 @@
 This is an example project for using GraphQL (Graphene-SQLAlchemy) with Python-Flask.
 
 ## Requirements
-Python 3.5.2+
-sqlite3
+* Python 3.5.2+
+* sqlite3
 
 ## Installing Requirements
 ```
-pip3 install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
 ## Runnning Flask Server
 ```
-python3 app.py
+$ python3 app.py
 ```
 ## Creating a new Database
 ```
-sqlite3 database.db < database.txt
+$ sqlite3 database.db < database.txt
 ```
 ## Testing GraphQL
 Go to http://localhost:5000/graphql to try GraphQL.
