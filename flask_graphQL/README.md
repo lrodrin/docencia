@@ -3,6 +3,7 @@ This is an example project for using GraphQL (Graphene-SQLAlchemy) with Python-F
 
 ## Requirements
 Python 3.5.2+
+sqlite3
 
 ## Installing Requirements
 ```
@@ -13,8 +14,9 @@ pip3 install -r requirements.txt
 python3 app.py
 ```
 ## Creating a new Database
-# TODO
-
+```
+~$ sqlite3 database.db < database.txt
+```
 ## Testing GraphQL
 Go to http://localhost:5000/graphql to try GraphQL.
 
