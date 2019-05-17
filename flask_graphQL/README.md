@@ -15,7 +15,7 @@ python3 app.py
 ```
 ## Creating a new Database
 ```
-~$ sqlite3 database.db < database.txt
+sqlite3 database.db < database.txt
 ```
 ## Testing GraphQL
 Go to http://localhost:5000/graphql to try GraphQL.
