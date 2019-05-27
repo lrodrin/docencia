@@ -1,4 +1,4 @@
-# gRPC framework example in Python
+# gRPC Example
 
 ## Usage
 To run the server:
