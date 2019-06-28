@@ -11,8 +11,8 @@ To run the server on a Docker container, please execute the following from the r
 
 ```bash
 # building the image
-docker build -t swagger_server .
+docker build -t test .
 
 # starting up the container
-docker run -it swagger_server
+docker run -d -p 80:80 --name webserver test
 ```
