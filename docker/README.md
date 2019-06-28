@@ -16,3 +16,7 @@ docker build -t test .
 # starting up the container
 docker run -d -p 80:80 --name webserver test
 ```
+and open your browser to here:
+```
+http://localhost:80/
+```
