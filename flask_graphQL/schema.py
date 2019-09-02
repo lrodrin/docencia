@@ -52,6 +52,26 @@ class changeUsername(graphene.Mutation):
         return changeUsername(user=user, ok=ok)
 
 
+# Used to Delete User with Username
+class deleteUser(graphene.Mutation):
+    class Input:
+        username = graphene.String()
+
+    ok = graphene.Boolean()
+    user = graphene.Field(Users)
+
+    @classmethod
+    def mutate(cls, _, args, context, info):
+        query = Users.get_query(context)
+        username = args.get('username')
+        user = query.filter(UserModel.username == username)
+        db_session.delete(user)
+        db_session.commit()
+        ok = True
+
+        return changeUsername(user=user, ok=ok)
+
+
 class Query(graphene.ObjectType):
     node = relay.Node.Field()
     user = SQLAlchemyConnectionField(Users)
@@ -68,6 +88,7 @@ class Query(graphene.ObjectType):
 class MyMutations(graphene.ObjectType):
     create_user = createUser.Field()
     change_username = changeUsername.Field()
+    delete_user = deleteUser.Field()
 
 
 schema = graphene.Schema(query=Query, mutation=MyMutations, types=[Users])
