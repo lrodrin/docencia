@@ -64,12 +64,12 @@ class deleteUser(graphene.Mutation):
     def mutate(cls, _, args, context, info):
         query = Users.get_query(context)
         username = args.get('username')
-        user = query.filter(UserModel.username == username)
+        user = query.filter(UserModel.username == username).first()
         db_session.delete(user)
         db_session.commit()
         ok = True
 
-        return changeUsername(user=user, ok=ok)
+        return deleteUser(user=user, ok=ok)
 
 
 class Query(graphene.ObjectType):
