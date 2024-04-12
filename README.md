@@ -1,2 +1,1 @@
-# wwcb
-Women Who Code Barcelona projects
+# docència
